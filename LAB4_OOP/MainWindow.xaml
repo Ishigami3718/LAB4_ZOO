@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
     <Canvas>
 
-        <Button Content="Клітки" MinWidth="160" MinHeight="60" Margin="43,27,594,349" FontSize="30"/>
+        <Button Content="Клітки" MinWidth="160" MinHeight="60" Margin="43,27,594,349" FontSize="30" Click="Cages"/>
         <Button Content="Вольєри" MinWidth="160" MinHeight="60" Margin="43,104,594,272" FontSize="30"/>
         <Button Content="Акваріуми" MinWidth="160" MinHeight="60" Margin="43,174,594,199" FontSize="30"/>
         <Button Content="Тераріуми" MinWidth="160" MinHeight="60" Margin="43,253,594,121" FontSize="30"/>

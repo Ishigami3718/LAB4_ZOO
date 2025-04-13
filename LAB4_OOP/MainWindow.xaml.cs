@@ -32,5 +32,12 @@ namespace LAB4_OOP
             room.RoomTypeComboBox.ItemsSource = Enum.GetValues(typeof(RoomType.Type));
             room.ShowDialog();
         }
+
+        private void Cages(object sender, RoutedEventArgs e)
+        {
+
+            Window2 cage = new Window2();
+            cage.ShowDialog();
+        }
     }
 }

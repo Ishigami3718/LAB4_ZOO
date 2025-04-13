@@ -23,7 +23,7 @@ namespace LAB4_OOP
     /// </summary>
     public partial class Window1 : Window
     {
-        List<Room> rooms;
+        List<RoomDTO> rooms;
         public Window1()
         {
             InitializeComponent();
@@ -46,17 +46,17 @@ namespace LAB4_OOP
             int count;
             try
             {
-                XmlSerializer ser = new XmlSerializer(typeof(List<Room>));
+                XmlSerializer ser = new XmlSerializer(typeof(List<RoomDTO>));
                 using(TextReader tr = new StreamReader(@"D:\Visual Studio\LAB3_OOP\LAB3_OOP\Rooms.txt"))
                 {
-                    rooms = (List<Room>)ser.Deserialize(tr);
+                    rooms = (List<RoomDTO>)ser.Deserialize(tr);
                 }
                 count = rooms.Count+1;
             }
             catch
             {
                 count = 1;
-                rooms = new List<Room>();
+                rooms = new List<RoomDTO>();
             }
             RoomDTO room = new RoomDTO
             {
@@ -66,7 +66,7 @@ namespace LAB4_OOP
                 CleanPrice = int.Parse(Price.Text),
                 AnimalsInfo = new List<AccountUnit>()
             };
-            rooms.Add(new Room(room));
+            rooms.Add(room);
             this.Close();
         }
 
@@ -76,17 +76,7 @@ namespace LAB4_OOP
         }*/
         private void Close(object sender, EventArgs e)
         {
-            try
-            {
-                XmlSerializer ser = new XmlSerializer(typeof(List<Room>));
-                using (TextWriter sr = new StreamWriter(@"D:\Visual Studio\LAB3_OOP\LAB3_OOP\Rooms.txt"))
-                {
-                    ser.Serialize(sr,rooms);
-                }
-            }
-            catch
-            {
-            }
+            Room.Ser(rooms);
         }
     }
 }
