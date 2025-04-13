@@ -23,6 +23,14 @@ namespace LAB4_OOP
             return $"Номер:{number}, вартість прибирання:{cleanPrice}";
         }
 
+        public Room(RoomDTO room)
+        {
+            type = room.Type;
+            number = room.Number;
+            size = room.Size;
+            cleanPrice = room.CleanPrice;
+            animalsInfo = room.AnimalsInfo;
+        }
         
     }
 }

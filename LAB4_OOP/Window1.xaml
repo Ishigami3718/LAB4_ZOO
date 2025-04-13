@@ -16,6 +16,7 @@
                    TextAlignment="Right" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <TextBlock Text="Ціна прибирання" Margin="13,113,0,0" MinWidth="100" MinHeight="25"
                    TextAlignment="Right" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Button Content="OK" Width="76" Height="31" Canvas.Left="214" Canvas.Top="143" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
     </Canvas>
 </Window>

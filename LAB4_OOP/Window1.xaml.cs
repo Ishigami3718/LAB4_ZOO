@@ -38,6 +38,18 @@ namespace LAB4_OOP
             }
         }
 
+        public void AddRoom(object sender, RoutedEventArgs e)
+        {
+            RoomDTO room = new RoomDTO
+            {
+                Type = (RoomType)RoomTypeComboBox.SelectedItem,
+                Number = 0,
+                Size = int.Parse(Size.Text),
+                CleanPrice = int.Parse(Price.Text),
+                AnimalsInfo = new List<AccountUnit>()
+            };
+            rooms.Add(new Room(room));
+        }
 
     }
 }
