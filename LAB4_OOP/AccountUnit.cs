@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace LAB4_OOP
 {
+    [Serializable]
     public class AccountUnit
     {
         private Animal animal;

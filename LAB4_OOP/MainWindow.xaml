@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LAB4_OOP"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="Клітки" Margin="43,40,594,336" FontSize="30"/>
-        <Button Content="Вольєри" Margin="43,129,594,247" FontSize="30"/>
-        <Button Content="Акваріуми" Margin="43,217,594,157" FontSize="30"/>
-        <Button Content="Тераріуми" Margin="43,312,594,62" FontSize="30"/>
-        <TextBlock Text="Зоопарк &quot;Big Piece&quot;" Margin="341,26,81,322" FontSize="40" 
-                 HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Image Source="D:\Visual Studio\LAB3_OOP\LAB3_OOP\images\MainImage.jpg" Margin="231,101,14,32" RenderTransformOrigin="0.5,0.5">
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+    <Canvas>
+
+        <Button Content="Клітки" MinWidth="160" MinHeight="60" Margin="43,27,594,349" FontSize="30"/>
+        <Button Content="Вольєри" MinWidth="160" MinHeight="60" Margin="43,104,594,272" FontSize="30"/>
+        <Button Content="Акваріуми" MinWidth="160" MinHeight="60" Margin="43,174,594,199" FontSize="30"/>
+        <Button Content="Тераріуми" MinWidth="160" MinHeight="60" Margin="43,253,594,121" FontSize="30"/>
+        <TextBlock Text="Зоопарк &quot;Big Piece&quot;" Margin="325,13,0,0" FontSize="40" 
+                 HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image Source="D:\Visual Studio\LAB3_OOP\LAB3_OOP\images\MainImage.jpg" RenderTransformOrigin="0.5,0.5" Canvas.Left="258" Canvas.Top="71" Height="327" Width="491">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -23,7 +24,8 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
+        <Button Content="Додати кімнату" MinWidth="160" MinHeight="60" Margin="43,331,594,43" FontSize="22" Click="AddRoom"/>
 
 
-    </Grid>
+    </Canvas>
 </Window>

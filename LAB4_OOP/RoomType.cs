@@ -8,7 +8,7 @@ namespace LAB4_OOP
 {
     public  class RoomType
     {
-        enum String
+        public enum String
         {
             Cage,
             Aviary,

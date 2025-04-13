@@ -10,27 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace LAB4_OOP
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Window1 : Window
     {
-        public MainWindow()
+        public Window1()
         {
             InitializeComponent();
-        }
-
-        private void AddRoom(object sender, RoutedEventArgs e)
-        {
-
-            Window1 room = new Window1();
-            room.RoomTypeComboBox.ItemsSource = Enum.GetValues(typeof(RoomType.String));
-            room.ShowDialog();
         }
     }
 }

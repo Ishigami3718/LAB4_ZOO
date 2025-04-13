@@ -23,5 +23,6 @@ namespace LAB4_OOP
             return $"Номер:{number}, вартість прибирання:{cleanPrice}";
         }
 
+        
     }
 }
