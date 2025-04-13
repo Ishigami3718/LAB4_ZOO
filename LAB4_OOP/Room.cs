@@ -12,6 +12,7 @@ namespace LAB4_OOP
         private RoomType type;
         private int number, size, cleanPrice;
         private List<AccountUnit> animalsInfo;
+        public Room() { }
 
         public override String ToString()
         {
