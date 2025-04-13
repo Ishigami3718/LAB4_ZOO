@@ -8,8 +8,8 @@
         Title="Додання кімнати" Height="200" Width="300" ResizeMode="NoResize">
     <Canvas>
         <ComboBox x:Name="RoomTypeComboBox" Margin="129,29,90,130" MinWidth="80" MinHeight="25"/>
-        <TextBox Margin="129,67,90,92" MinWidth="80" MinHeight="25"/>
-        <TextBox Margin="129,108,90,50" MinWidth="80" MinHeight="25"/>
+        <TextBox x:Name="Size" Margin="129,67,90,92" MinWidth="80" MinHeight="25" PreviewLostKeyboardFocus="Validate"/>
+        <TextBox x:Name="Price" Margin="129,108,90,50" MinWidth="80" MinHeight="25" PreviewLostKeyboardFocus="Validate"/>
         <TextBlock Text="Тип кімнати" Margin="28,29,180,130" MinWidth="80" MinHeight="25"
                    TextAlignment="Right" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <TextBlock Text="Розмір м²" Margin="26,67,0,0" MinWidth="87" MinHeight="25"

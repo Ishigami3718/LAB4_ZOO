@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,9 +20,24 @@ namespace LAB4_OOP
     /// </summary>
     public partial class Window1 : Window
     {
+        List<Room> rooms;
         public Window1()
         {
             InitializeComponent();
         }
+
+        public void Validate(object sender, RoutedEventArgs e)
+        {
+            Regex digit = new Regex("\\d+");
+            TextBox text = (TextBox)sender;
+            if (!digit.IsMatch(text.Text))
+            {
+                text.Focus();
+                e.Handled = true;
+                MessageBox.Show("Неправильні дані");
+            }
+        }
+
+
     }
 }
