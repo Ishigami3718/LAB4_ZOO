@@ -61,12 +61,11 @@ namespace LAB4_OOP
              room = new RoomDTO
             {
                 Type = (RoomType.Type)RoomTypeComboBox.SelectedItem,
-                Number = count,
+                Number = count++,
                 Size = int.Parse(Size.Text),
                 CleanPrice = int.Parse(Price.Text),
                 AnimalsInfo = new List<AccountUnit>()
             };
-            MainWindow.Count++;
             //rooms.Add(room);
             this.Close();
         }

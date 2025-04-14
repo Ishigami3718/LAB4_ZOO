@@ -21,17 +21,15 @@ namespace LAB4_OOP
     public partial class MainWindow : Window
     {
         public static List<RoomDTO> rooms;
-        static int count;
         //public static RoomDTO newRoom;
         public MainWindow()
         {
             InitializeComponent();
             rooms=Room.Deser(rooms);
-            if (rooms != null) count = rooms.Count;
-            else { count = 1; rooms = new List<RoomDTO>(); }
+            if (rooms == null)  rooms = new List<RoomDTO>(); 
         }
 
-        public static int Count { get { return count; } set { count = value; } }
+        public static int Count { get { return rooms.Count; } }
         private void AddRoom(object sender, RoutedEventArgs e)
         {
 
