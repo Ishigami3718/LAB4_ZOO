@@ -11,7 +11,7 @@ namespace LAB4_OOP
     [Serializable]
     public class Room
     {
-        private RoomType type;
+        private RoomType.Type type;
         private int number, size, cleanPrice;
         private List<AccountUnit> animalsInfo;
         public Room() { }
@@ -47,18 +47,25 @@ namespace LAB4_OOP
             };
         }
 
+        //TODO put in another Class
         public static void Ser(List<RoomDTO> rooms)
         {
             try
             {
                 XmlSerializer ser = new XmlSerializer(typeof(List<RoomDTO>));
-                using (TextWriter sr = new StreamWriter(@"D:\Visual Studio\LAB3_OOP\LAB3_OOP\Rooms.txt"))
+                using (TextWriter sr = new StreamWriter(@"D:\Visual Studio\LAB4_OOP\LAB4_OOP\Data\Rooms.xml"))
                 {
                     ser.Serialize(sr, rooms);
                 }
             }
-            catch
+            catch(FileNotFoundException)
             {
+                File.Create(@"D:\Visual Studio\LAB4_OOP\LAB4_OOP\Data\Rooms.xml");
+                XmlSerializer ser = new XmlSerializer(typeof(List<RoomDTO>));
+                using (TextWriter sr = new StreamWriter(@"D:\Visual Studio\LAB4_OOP\LAB4_OOP\Data\Rooms.xml"))
+                {
+                    ser.Serialize(sr, rooms);
+                }
             }
         }
 
@@ -67,7 +74,7 @@ namespace LAB4_OOP
             try
             {
                 XmlSerializer ser = new XmlSerializer(typeof(List<RoomDTO>));
-                using (TextReader tr = new StreamReader(@"D:\Visual Studio\LAB3_OOP\LAB3_OOP\Rooms.txt"))
+                using (TextReader tr = new StreamReader(@"D:\Visual Studio\LAB4_OOP\LAB4_OOP\Data\Rooms.xml"))
                 {
                     rooms = (List<RoomDTO>)ser.Deserialize(tr);
                 }

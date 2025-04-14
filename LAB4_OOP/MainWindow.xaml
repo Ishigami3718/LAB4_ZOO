@@ -14,7 +14,7 @@
         <Button Content="Тераріуми" MinWidth="160" MinHeight="60" Margin="43,253,594,121" FontSize="30"/>
         <TextBlock Text="Зоопарк &quot;Big Piece&quot;" Margin="325,13,0,0" FontSize="40" 
                  HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Image Source="D:\Visual Studio\LAB3_OOP\LAB3_OOP\images\MainImage.jpg" RenderTransformOrigin="0.5,0.5" Canvas.Left="258" Canvas.Top="71" Height="327" Width="491">
+        <Image Source="/MainImage.jpg" RenderTransformOrigin="0.5,0.5" Canvas.Left="258" Canvas.Top="71" Height="327" Width="491">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

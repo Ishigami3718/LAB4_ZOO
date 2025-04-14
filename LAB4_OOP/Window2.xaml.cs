@@ -30,9 +30,8 @@ namespace LAB4_OOP
         private void ShowInList()
         {
             DTOrooms = Room.Deser(DTOrooms);
-            foreach (RoomDTO room in DTOrooms)
+            foreach (RoomDTO room in DTOrooms.Where(i=>i.Type==RoomType.Type.Cage))
             {
-                //if(room.Type==RoomType.Type.Cage)
                 rooms.Add(new Room(room));
             }
             foreach (Room room in rooms)

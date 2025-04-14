@@ -31,7 +31,7 @@ namespace LAB4_OOP
 
         public void Validate(object sender, RoutedEventArgs e)
         {
-            Regex digit = new Regex("\\d+");
+            Regex digit = new Regex("^\\d+$");
             TextBox text = (TextBox)sender;
             if (!digit.IsMatch(text.Text))
             {
@@ -46,11 +46,7 @@ namespace LAB4_OOP
             int count;
             try
             {
-                XmlSerializer ser = new XmlSerializer(typeof(List<RoomDTO>));
-                using(TextReader tr = new StreamReader(@"D:\Visual Studio\LAB3_OOP\LAB3_OOP\Rooms.txt"))
-                {
-                    rooms = (List<RoomDTO>)ser.Deserialize(tr);
-                }
+                rooms=Room.Deser(rooms);
                 count = rooms.Count+1;
             }
             catch
@@ -60,7 +56,7 @@ namespace LAB4_OOP
             }
             RoomDTO room = new RoomDTO
             {
-                Type = RoomTypeComboBox.SelectedItem as RoomType,
+                Type = (RoomType.Type)RoomTypeComboBox.SelectedItem,
                 Number = count,
                 Size = int.Parse(Size.Text),
                 CleanPrice = int.Parse(Price.Text),

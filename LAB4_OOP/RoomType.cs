@@ -10,10 +10,10 @@ namespace LAB4_OOP
     {
         public enum Type
         {
-            Cage,
-            Aviary,
-            Aquarium,
-            Terrarium
+            Cage=1,
+            Aviary=2,
+            Aquarium=3,
+            Terrarium=4
         }
 
     }
