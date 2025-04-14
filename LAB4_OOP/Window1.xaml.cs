@@ -23,10 +23,14 @@ namespace LAB4_OOP
     /// </summary>
     public partial class Window1 : Window
     {
-        List<RoomDTO> rooms;
+        //List<RoomDTO> rooms;
+        RoomDTO room;
+        int count;
+
         public Window1()
         {
             InitializeComponent();
+            count = MainWindow.Count;
         }
 
         public void Validate(object sender, RoutedEventArgs e)
@@ -43,7 +47,7 @@ namespace LAB4_OOP
 
         public void AddRoom(object sender, RoutedEventArgs e)
         {
-            int count;
+           /* int count;
             try
             {
                 rooms=Room.Deser(rooms);
@@ -53,8 +57,8 @@ namespace LAB4_OOP
             {
                 count = 1;
                 rooms = new List<RoomDTO>();
-            }
-            RoomDTO room = new RoomDTO
+            }*/
+             room = new RoomDTO
             {
                 Type = (RoomType.Type)RoomTypeComboBox.SelectedItem,
                 Number = count,
@@ -62,7 +66,8 @@ namespace LAB4_OOP
                 CleanPrice = int.Parse(Price.Text),
                 AnimalsInfo = new List<AccountUnit>()
             };
-            rooms.Add(room);
+            MainWindow.Count++;
+            //rooms.Add(room);
             this.Close();
         }
 
@@ -72,7 +77,8 @@ namespace LAB4_OOP
         }*/
         private void Close(object sender, EventArgs e)
         {
-            Room.Ser(rooms);
+           // Room.Ser(rooms);
+           MainWindow.rooms.Add(room);
         }
     }
 }

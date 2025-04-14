@@ -20,11 +20,18 @@ namespace LAB4_OOP
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static List<RoomDTO> rooms;
+        static int count;
+        //public static RoomDTO newRoom;
         public MainWindow()
         {
             InitializeComponent();
+            rooms=Room.Deser(rooms);
+            if (rooms != null) count = rooms.Count;
+            else { count = 1; rooms = new List<RoomDTO>(); }
         }
 
+        public static int Count { get { return count; } set { count = value; } }
         private void AddRoom(object sender, RoutedEventArgs e)
         {
 
@@ -38,6 +45,13 @@ namespace LAB4_OOP
 
             Window2 cage = new Window2();
             cage.ShowDialog();
+        }
+
+        private void Close(object sender, EventArgs e)
+        {
+            Room.Ser(rooms);
+            this.Close();
+
         }
     }
 }

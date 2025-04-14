@@ -2,30 +2,30 @@
 <ArrayOfRoomDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <RoomDTO>
     <Type>Cage</Type>
+    <Number>0</Number>
+    <Size>12434</Size>
+    <CleanPrice>222</CleanPrice>
+    <AnimalsInfo />
+  </RoomDTO>
+  <RoomDTO>
+    <Type>Aviary</Type>
     <Number>1</Number>
-    <Size>324</Size>
-    <CleanPrice>243</CleanPrice>
+    <Size>2144</Size>
+    <CleanPrice>1412</CleanPrice>
     <AnimalsInfo />
   </RoomDTO>
   <RoomDTO>
     <Type>Cage</Type>
     <Number>2</Number>
-    <Size>424</Size>
-    <CleanPrice>2432</CleanPrice>
-    <AnimalsInfo />
-  </RoomDTO>
-  <RoomDTO>
-    <Type>Aviary</Type>
-    <Number>3</Number>
-    <Size>242</Size>
-    <CleanPrice>4214</CleanPrice>
+    <Size>43234</Size>
+    <CleanPrice>244</CleanPrice>
     <AnimalsInfo />
   </RoomDTO>
   <RoomDTO>
     <Type>Cage</Type>
-    <Number>4</Number>
-    <Size>424</Size>
-    <CleanPrice>2141</CleanPrice>
+    <Number>3</Number>
+    <Size>214211</Size>
+    <CleanPrice>21444</CleanPrice>
     <AnimalsInfo />
   </RoomDTO>
 </ArrayOfRoomDTO>
