@@ -26,11 +26,22 @@ namespace LAB4_OOP
         //List<RoomDTO> rooms;
         RoomDTO room;
         int count;
+        bool isRedact=false;
 
         public Window1()
         {
             InitializeComponent();
             count = MainWindow.Count;
+        }
+
+        public Window1(string size, string price, RoomType.Type type, int num)
+        {
+            InitializeComponent();
+            Size.Text = size;
+            Price.Text = price;
+            RoomTypeComboBox.SelectedItem = type;
+            isRedact = true;
+            count=num;
         }
 
         public void Validate(object sender, RoutedEventArgs e)
@@ -47,27 +58,28 @@ namespace LAB4_OOP
 
         public void AddRoom(object sender, RoutedEventArgs e)
         {
-           /* int count;
-            try
+            if (isRedact)
             {
-                rooms=Room.Deser(rooms);
-                count = rooms.Count+1;
+                room = new RoomDTO
+                {
+                    Type = (RoomType.Type)RoomTypeComboBox.SelectedItem,
+                    Number = count,
+                    Size = int.Parse(Size.Text),
+                    CleanPrice = int.Parse(Price.Text),
+                };
             }
-            catch
+            else
             {
-                count = 1;
-                rooms = new List<RoomDTO>();
-            }*/
-            count++;
-            room = new RoomDTO
-            {
-                Type = (RoomType.Type)RoomTypeComboBox.SelectedItem,
-                Number = count,
-                Size = int.Parse(Size.Text),
-                CleanPrice = int.Parse(Price.Text),
-                AnimalsInfo = new List<AccountUnit>()
-            };
-            //rooms.Add(room);
+                count++;
+                room = new RoomDTO
+                {
+                    Type = (RoomType.Type)RoomTypeComboBox.SelectedItem,
+                    Number = count,
+                    Size = int.Parse(Size.Text),
+                    CleanPrice = int.Parse(Price.Text),
+                    AnimalsInfo = new List<AccountUnit>()
+                };
+            }
             this.Close();
         }
 
@@ -78,16 +90,21 @@ namespace LAB4_OOP
         private void Close(object sender, CancelEventArgs e)
         {
             // Room.Ser(rooms);
-            if (Size.Text == null || Price.Text == null || RoomTypeComboBox.SelectedItem == null)
+            if (Size.Text == null || Price.Text == null || RoomTypeComboBox.SelectedItem == null || room==null)
             {
                 MessageBoxResult mb = MessageBox.Show("Ви не задали дані, бажаєте закрити?", "Підтвердження", MessageBoxButton.YesNo);
                 if (mb == MessageBoxResult.Yes) { }
                 if (mb == MessageBoxResult.No) { e.Cancel = true; }
+            }
+            else if (isRedact)
+            {
+                MainWindow.RedactRoom(room,room.Number);
             }
             else
             {
                 MainWindow.AddRoom(room);
             }
         }
+
     }
 }

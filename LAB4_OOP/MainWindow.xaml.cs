@@ -31,6 +31,11 @@ namespace LAB4_OOP
         }
 
         public static void AddRoom(RoomDTO room) => rooms.Add(room);
+
+        public static void RedactRoom(RoomDTO room, int num)
+        {
+            rooms[num]=room;
+        }
         public static int Count { get { return rooms.Count; } }
         private void AddRoom(object sender, RoutedEventArgs e)
         {
@@ -49,6 +54,16 @@ namespace LAB4_OOP
         private void RedactRoom(object sender, SelectionChangedEventArgs e)
         {
             Redact.IsEnabled= true;
+        }
+
+        private void RedactRoom_Click(object sender, RoutedEventArgs e)
+        {
+            int indx = Rooms.SelectedIndex;
+            Window1 red = new Window1(rooms[indx].Size.ToString(), rooms[indx].CleanPrice.ToString(), rooms[indx].Type, indx);
+            red.RoomTypeComboBox.ItemsSource = Enum.GetValues(typeof(RoomType.Type));
+            red.Title = "Редагування";
+            red.ShowDialog();
+                //TODO Дописати метод для редагування через отримання інфи з лістбоксу
         }
     }
 }

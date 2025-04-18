@@ -23,7 +23,7 @@
         </Image>
         <Button Content="Додати кімнату" MinWidth="120" MinHeight="60" FontSize="16" Click="AddRoom" Height="42" Canvas.Left="43" Canvas.Top="331" Width="113" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Button x:Name="Redact" Content="Редагувати&#x0a;   кімнату" MinWidth="120" MinHeight="60" FontSize="16" 
-                Click="AddRoom" Height="42" Canvas.Left="186" Canvas.Top="331" Width="113" 
+                Click="RedactRoom_Click" Height="42" Canvas.Left="186" Canvas.Top="331" Width="113" 
                 HorizontalAlignment="Left" VerticalAlignment="Center"  IsEnabled="False"/>
 
 

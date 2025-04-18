@@ -8,10 +8,10 @@
     <AnimalsInfo />
   </RoomDTO>
   <RoomDTO>
-    <Type>Cage</Type>
+    <Type>Aquarium</Type>
     <Number>1</Number>
-    <Size>214441</Size>
-    <CleanPrice>12213</CleanPrice>
+    <Size>1000</Size>
+    <CleanPrice>30</CleanPrice>
     <AnimalsInfo />
   </RoomDTO>
   <RoomDTO>
@@ -37,9 +37,23 @@
   </RoomDTO>
   <RoomDTO>
     <Type>Aviary</Type>
-    <Number>6</Number>
+    <Number>5</Number>
     <Size>213</Size>
     <CleanPrice>214</CleanPrice>
+    <AnimalsInfo />
+  </RoomDTO>
+  <RoomDTO>
+    <Type>Cage</Type>
+    <Number>6</Number>
+    <Size>100</Size>
+    <CleanPrice>150</CleanPrice>
+    <AnimalsInfo />
+  </RoomDTO>
+  <RoomDTO>
+    <Type>Cage</Type>
+    <Number>8</Number>
+    <Size>54</Size>
+    <CleanPrice>21</CleanPrice>
     <AnimalsInfo />
   </RoomDTO>
 </ArrayOfRoomDTO>
