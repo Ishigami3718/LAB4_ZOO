@@ -26,7 +26,8 @@ namespace LAB4_OOP
         {
             InitializeComponent();
             rooms=Room.Deser(rooms);
-            if (rooms == null)  rooms = new List<RoomDTO>(); 
+            if (rooms == null)  rooms = new List<RoomDTO>();
+            foreach (RoomDTO room in rooms) Rooms.Items.Add(room);
         }
 
         public static void AddRoom(RoomDTO room) => rooms.Add(room);
@@ -38,14 +39,6 @@ namespace LAB4_OOP
             room.RoomTypeComboBox.ItemsSource = Enum.GetValues(typeof(RoomType.Type));
             room.ShowDialog();
         }
-
-        private void Cages(object sender, RoutedEventArgs e)
-        {
-
-            Window2 cage = new Window2();
-            cage.ShowDialog();
-        }
-
         private void Close(object sender, EventArgs e)
         {
             Room.Ser(rooms);

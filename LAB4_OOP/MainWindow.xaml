@@ -7,14 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize" Closed="Close">
     <Canvas>
-
-        <Button Content="Клітки" MinWidth="160" MinHeight="60" Margin="43,27,594,349" FontSize="30" Click="Cages"/>
-        <Button Content="Вольєри" MinWidth="160" MinHeight="60" Margin="43,104,594,272" FontSize="30"/>
-        <Button Content="Акваріуми" MinWidth="160" MinHeight="60" Margin="43,174,594,199" FontSize="30"/>
-        <Button Content="Тераріуми" MinWidth="160" MinHeight="60" Margin="43,253,594,121" FontSize="30"/>
-        <TextBlock Text="Зоопарк &quot;Big Piece&quot;" Margin="325,13,0,0" FontSize="40" 
-                 HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Image Source="/MainImage.jpg" RenderTransformOrigin="0.5,0.5" Canvas.Left="258" Canvas.Top="71" Height="327" Width="491">
+        <ListBox x:Name="Rooms" Width="316" Height="177" Canvas.Left="28" Canvas.Top="40" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBlock Text="Зоопарк &quot;Big Piece&quot;" FontSize="40" 
+                 HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="382" Canvas.Top="40"/>
+        <Image Source="/MainImage.jpg" RenderTransformOrigin="0.5,0.5" Canvas.Left="349" Canvas.Top="105" Height="290" Width="424">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
