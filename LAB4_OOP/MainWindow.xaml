@@ -25,6 +25,15 @@
         <Button x:Name="Redact" Content="Редагувати&#x0a;   кімнату" MinWidth="120" MinHeight="60" FontSize="16" 
                 Click="RedactRoom_Click" Height="42" Canvas.Left="186" Canvas.Top="331" Width="113" 
                 HorizontalAlignment="Left" VerticalAlignment="Center"  IsEnabled="False"/>
+        <Button x:Name="GetRooms" Content="Отримати" Height="50" Width="110" Canvas.Left="196" Canvas.Top="225" 
+                HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" IsEnabled="False" Click="GetRoom"/>
+        <ComboBox x:Name="RoomTypes" Canvas.Left="43" Canvas.Top="232" Height="36" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center"
+                  SelectionChanged="GetRoomOfType"
+                  ItemsSource="{Binding RoomTypes}"
+                  SelectedItem="{Binding SelectedRoomType}">
+        </ComboBox>
+        <Button x:Name="AllRooms"  Content="Усі кімнати" Height="32" Width="110" Canvas.Left="196" Canvas.Top="280" 
+            FontSize="20" IsEnabled="False" Click="GetAllRooms" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
 
     </Canvas>

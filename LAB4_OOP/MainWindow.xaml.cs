@@ -28,14 +28,31 @@ namespace LAB4_OOP
             rooms=Room.Deser(rooms);
             if (rooms == null)  rooms = new List<RoomDTO>();
             foreach (RoomDTO room in rooms) Rooms.Items.Add(new Room(room));
+            RoomTypes.ItemsSource = Enum.GetValues(typeof(RoomType.Type));
+        }
+
+        private List<RoomDTO> GetRoomsOfType(RoomType.Type type)
+        {
+            return rooms.Where(i=>i.Type==type).ToList();
+        }
+
+        private void GetRoom(object sender, RoutedEventArgs e)
+        {
+            Rooms.Items.Clear();
+            foreach(RoomDTO room in GetRoomsOfType((RoomType.Type)RoomTypes.SelectedItem)) Rooms.Items.Add(new Room(room));
+            AllRooms.IsEnabled = true;
+        }
+
+        private void GetAllRooms(object sender, RoutedEventArgs e)
+        {
+            Rooms.Items.Clear();
+            foreach (RoomDTO room in rooms) Rooms.Items.Add(new Room(room));
+            AllRooms.IsEnabled = false;
         }
 
         public static void AddRoom(RoomDTO room) => rooms.Add(room);
 
-        public static void RedactRoom(RoomDTO room, int num)
-        {
-            rooms[num]=room;
-        }
+        public static void RedactRoom(RoomDTO room, int num) => rooms[num] = room;
         public static int Count { get { return rooms.Count; } }
         private void AddRoom(object sender, RoutedEventArgs e)
         {
@@ -51,10 +68,9 @@ namespace LAB4_OOP
 
         }
 
-        private void RedactRoom(object sender, SelectionChangedEventArgs e)
-        {
-            Redact.IsEnabled= true;
-        }
+        private void RedactRoom(object sender, SelectionChangedEventArgs e) => Redact.IsEnabled = true;
+
+        private void GetRoomOfType(object sender, SelectionChangedEventArgs e) => GetRooms.IsEnabled = true;
 
         private void RedactRoom_Click(object sender, RoutedEventArgs e)
         {
@@ -63,7 +79,6 @@ namespace LAB4_OOP
             red.RoomTypeComboBox.ItemsSource = Enum.GetValues(typeof(RoomType.Type));
             red.Title = "Редагування";
             red.ShowDialog();
-                //TODO Дописати метод для редагування через отримання інфи з лістбоксу
         }
     }
 }
