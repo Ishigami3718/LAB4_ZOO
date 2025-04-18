@@ -20,7 +20,7 @@ namespace LAB4_OOP
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static List<RoomDTO> rooms;
+        static List<RoomDTO> rooms;
         //public static RoomDTO newRoom;
         public MainWindow()
         {
@@ -29,6 +29,7 @@ namespace LAB4_OOP
             if (rooms == null)  rooms = new List<RoomDTO>(); 
         }
 
+        public static void AddRoom(RoomDTO room) => rooms.Add(room);
         public static int Count { get { return rooms.Count; } }
         private void AddRoom(object sender, RoutedEventArgs e)
         {

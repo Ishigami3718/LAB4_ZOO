@@ -58,10 +58,11 @@ namespace LAB4_OOP
                 count = 1;
                 rooms = new List<RoomDTO>();
             }*/
-             room = new RoomDTO
+            count++;
+            room = new RoomDTO
             {
                 Type = (RoomType.Type)RoomTypeComboBox.SelectedItem,
-                Number = count++,
+                Number = count,
                 Size = int.Parse(Size.Text),
                 CleanPrice = int.Parse(Price.Text),
                 AnimalsInfo = new List<AccountUnit>()
@@ -77,7 +78,7 @@ namespace LAB4_OOP
         private void Close(object sender, EventArgs e)
         {
            // Room.Ser(rooms);
-           MainWindow.rooms.Add(room);
+           MainWindow.AddRoom(room);
         }
     }
 }
