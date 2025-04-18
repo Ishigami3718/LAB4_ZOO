@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LAB4_OOP"
         mc:Ignorable="d"
-        Title="Додання кімнати" Height="200" Width="300" ResizeMode="NoResize" Closed="Close">
+        Title="Додання кімнати" Height="200" Width="300" ResizeMode="NoResize" Closing="Close">
     <Canvas>
         <ComboBox x:Name="RoomTypeComboBox" Margin="129,29,90,130" MinWidth="80" MinHeight="25" ItemsSource="{Binding RoomTypes}"
                   SelectedItem="{Binding SelectedRoomType}"/>

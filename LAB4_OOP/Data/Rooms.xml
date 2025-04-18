@@ -35,4 +35,11 @@
     <CleanPrice>1224444</CleanPrice>
     <AnimalsInfo />
   </RoomDTO>
+  <RoomDTO>
+    <Type>Aviary</Type>
+    <Number>6</Number>
+    <Size>213</Size>
+    <CleanPrice>214</CleanPrice>
+    <AnimalsInfo />
+  </RoomDTO>
 </ArrayOfRoomDTO>

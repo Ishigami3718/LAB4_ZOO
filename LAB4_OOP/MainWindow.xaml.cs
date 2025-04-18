@@ -27,7 +27,7 @@ namespace LAB4_OOP
             InitializeComponent();
             rooms=Room.Deser(rooms);
             if (rooms == null)  rooms = new List<RoomDTO>();
-            foreach (RoomDTO room in rooms) Rooms.Items.Add(room);
+            foreach (RoomDTO room in rooms) Rooms.Items.Add(new Room(room));
         }
 
         public static void AddRoom(RoomDTO room) => rooms.Add(room);
@@ -44,6 +44,11 @@ namespace LAB4_OOP
             Room.Ser(rooms);
             this.Close();
 
+        }
+
+        private void RedactRoom(object sender, SelectionChangedEventArgs e)
+        {
+            Redact.IsEnabled= true;
         }
     }
 }

@@ -75,10 +75,19 @@ namespace LAB4_OOP
         {
            MessageBox mb = new MessageBox("")
         }*/
-        private void Close(object sender, EventArgs e)
+        private void Close(object sender, CancelEventArgs e)
         {
-           // Room.Ser(rooms);
-           MainWindow.AddRoom(room);
+            // Room.Ser(rooms);
+            if (Size.Text == null || Price.Text == null || RoomTypeComboBox.SelectedItem == null)
+            {
+                MessageBoxResult mb = MessageBox.Show("Ви не задали дані, бажаєте закрити?", "Підтвердження", MessageBoxButton.YesNo);
+                if (mb == MessageBoxResult.Yes) { }
+                if (mb == MessageBoxResult.No) { e.Cancel = true; }
+            }
+            else
+            {
+                MainWindow.AddRoom(room);
+            }
         }
     }
 }

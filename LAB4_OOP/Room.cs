@@ -18,7 +18,7 @@ namespace LAB4_OOP
 
         public override String ToString()
         {
-            return $"номер:{number}, розмір:{size}, ціна прибирання:{cleanPrice}";
+            return $"номер: {number},тип кімнати: {type}, розмір:{size}, ціна прибирання:{cleanPrice}";
         }
 
         public string ToShortString()
