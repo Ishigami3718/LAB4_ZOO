@@ -60,6 +60,7 @@ namespace LAB4_OOP
         {
             if (isRedact)
             {
+                count++;
                 room = new RoomDTO
                 {
                     Type = (RoomType.Type)RoomTypeComboBox.SelectedItem,
@@ -98,7 +99,8 @@ namespace LAB4_OOP
             }
             else if (isRedact)
             {
-                MainWindow.RedactRoom(room,room.Number);
+                count--;
+                MainWindow.RedactRoom(room,count);
             }
             else
             {

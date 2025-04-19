@@ -74,7 +74,11 @@ namespace LAB4_OOP
 
         private void RedactRoom_Click(object sender, RoutedEventArgs e)
         {
-            int indx = Rooms.SelectedIndex;
+            int indx=0;
+            for(int i=0;i<rooms.Count;i++)
+            {
+                if (new Room(rooms[i]).ToString() == Rooms.SelectedValue.ToString()) indx = i;
+            }
             Window1 red = new Window1(rooms[indx].Size.ToString(), rooms[indx].CleanPrice.ToString(), rooms[indx].Type, indx);
             red.RoomTypeComboBox.ItemsSource = Enum.GetValues(typeof(RoomType.Type));
             red.Title = "Редагування";

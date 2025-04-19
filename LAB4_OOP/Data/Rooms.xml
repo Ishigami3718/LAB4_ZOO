@@ -2,58 +2,29 @@
 <ArrayOfRoomDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <RoomDTO>
     <Type>Cage</Type>
-    <Number>0</Number>
-    <Size>213132</Size>
-    <CleanPrice>241221</CleanPrice>
+    <Number>1</Number>
+    <Size>213</Size>
+    <CleanPrice>1244</CleanPrice>
     <AnimalsInfo />
   </RoomDTO>
   <RoomDTO>
     <Type>Aquarium</Type>
-    <Number>1</Number>
-    <Size>1000</Size>
-    <CleanPrice>30</CleanPrice>
+    <Number>2</Number>
+    <Size>213</Size>
+    <CleanPrice>1243</CleanPrice>
     <AnimalsInfo />
   </RoomDTO>
   <RoomDTO>
-    <Type>Aviary</Type>
-    <Number>2</Number>
-    <Size>23343</Size>
-    <CleanPrice>121221</CleanPrice>
-    <AnimalsInfo />
+    <Type>Aquarium</Type>
+    <Number>3</Number>
+    <Size>100</Size>
+    <CleanPrice>50</CleanPrice>
   </RoomDTO>
   <RoomDTO>
     <Type>Terrarium</Type>
-    <Number>3</Number>
-    <Size>21444</Size>
-    <CleanPrice>2112214</CleanPrice>
-    <AnimalsInfo />
-  </RoomDTO>
-  <RoomDTO>
-    <Type>Cage</Type>
     <Number>4</Number>
-    <Size>1234</Size>
-    <CleanPrice>1224444</CleanPrice>
-    <AnimalsInfo />
-  </RoomDTO>
-  <RoomDTO>
-    <Type>Aviary</Type>
-    <Number>5</Number>
-    <Size>213</Size>
-    <CleanPrice>214</CleanPrice>
-    <AnimalsInfo />
-  </RoomDTO>
-  <RoomDTO>
-    <Type>Cage</Type>
-    <Number>6</Number>
     <Size>100</Size>
-    <CleanPrice>150</CleanPrice>
-    <AnimalsInfo />
-  </RoomDTO>
-  <RoomDTO>
-    <Type>Cage</Type>
-    <Number>8</Number>
-    <Size>54</Size>
-    <CleanPrice>21</CleanPrice>
+    <CleanPrice>300</CleanPrice>
     <AnimalsInfo />
   </RoomDTO>
 </ArrayOfRoomDTO>
