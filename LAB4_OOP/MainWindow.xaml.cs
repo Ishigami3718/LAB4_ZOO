@@ -21,6 +21,7 @@ namespace LAB4_OOP
     public partial class MainWindow : Window
     {
         static List<RoomDTO> rooms;
+        static List<AccountUnitDTO> accountUnit;
         //public static RoomDTO newRoom;
         public MainWindow()
         {
@@ -68,7 +69,11 @@ namespace LAB4_OOP
 
         }
 
-        private void RedactRoom(object sender, SelectionChangedEventArgs e) => Redact.IsEnabled = true;
+        private void RedactRoom(object sender, SelectionChangedEventArgs e) 
+        {
+            Redact.IsEnabled = true;
+            Account.IsEnabled = true;
+        }
 
         private void GetRoomOfType(object sender, SelectionChangedEventArgs e) => GetRooms.IsEnabled = true;
 
@@ -83,6 +88,19 @@ namespace LAB4_OOP
             red.RoomTypeComboBox.ItemsSource = Enum.GetValues(typeof(RoomType.Type));
             red.Title = "Редагування";
             red.ShowDialog();
+        }
+
+        private void OpenAccounts(object sender, RoutedEventArgs e)
+        {
+            Window2 animals = new Window2(((Room)Rooms.SelectedItem).ToDTO().AnimalsInfo);
+            int indx = ((Room)Rooms.SelectedItem).ToDTO().Number - 1;
+            animals.ShowDialog();
+            rooms[indx].AnimalsInfo = accountUnit;
+        }
+
+        static public void AddUnits(List<AccountUnitDTO> accountUnitDTO)
+        {
+            accountUnit = accountUnitDTO;
         }
     }
 }

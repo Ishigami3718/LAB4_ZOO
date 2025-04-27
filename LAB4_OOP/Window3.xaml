@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LAB4_OOP"
         mc:Ignorable="d"
-        Title="Window3" Height="300" Width="300" ResizeMode="NoResize">
+        Title="Window3" Height="300" Width="300" ResizeMode="NoResize" Closing="Close">
     <Canvas>
-        <TextBox x:Name="FirstName" Margin="129,67,90,92" MinWidth="80" MinHeight="25" PreviewLostKeyboardFocus="Validate"/>
-        <TextBox x:Name="Country" Margin="129,108,90,50" MinWidth="80" MinHeight="25" PreviewLostKeyboardFocus="Validate"/>
+        <TextBox x:Name="FirstName" Margin="129,67,90,92" MinWidth="80" MinHeight="25"/>
+        <TextBox x:Name="Country" Margin="129,108,90,50" MinWidth="80" MinHeight="25"/>
         <TextBlock Text="Назва тварини" Margin="28,29,180,130" MinWidth="80" MinHeight="25"
            TextAlignment="Right" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <TextBlock Text="Ім'я" Margin="26,67,0,0" MinWidth="87" MinHeight="25"
@@ -16,8 +16,8 @@
         <TextBlock Text="Країна" Margin="13,113,0,0" MinWidth="100" MinHeight="25"
            TextAlignment="Right" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <DatePicker x:Name="Birth" Width="30" Height="26" Canvas.Left="129" Canvas.Top="144" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Button Content="OK" Width="76" Height="31" Canvas.Left="214" Canvas.Top="243" HorizontalAlignment="Center" VerticalAlignment="Top" Click="AddRoom"/>
-        <TextBox x:Name="Name" MinWidth="80" MinHeight="25" PreviewLostKeyboardFocus="Validate" Canvas.Left="129" Canvas.Top="29" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button Content="OK" Width="76" Height="31" Canvas.Left="214" Canvas.Top="243" HorizontalAlignment="Center" VerticalAlignment="Top" Click="AddAnimal"/>
+        <TextBox x:Name="Name" MinWidth="80" MinHeight="25" Canvas.Left="129" Canvas.Top="29" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <TextBlock Text="Дата народження" MinWidth="100" MinHeight="25"
             TextAlignment="Right" Canvas.Left="13" Canvas.Top="144" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <TextBlock Text="Дата прибуття" MinWidth="100" MinHeight="25"
@@ -25,6 +25,6 @@
         <TextBlock Text="Ціна" MinWidth="100" MinHeight="25"
             TextAlignment="Right" Canvas.Left="13" Canvas.Top="213" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <DatePicker x:Name="RecDate" Width="30" Height="26" Canvas.Left="129" Canvas.Top="182" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <TextBox x:Name="Price" MinWidth="80" MinHeight="25" PreviewLostKeyboardFocus="Validate" Canvas.Left="129" Canvas.Top="213" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox x:Name="Price" MinWidth="80" MinHeight="25" Canvas.Left="129" Canvas.Top="213" HorizontalAlignment="Center" VerticalAlignment="Top"/>
     </Canvas>
 </Window>

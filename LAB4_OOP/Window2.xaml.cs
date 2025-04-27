@@ -19,23 +19,34 @@ namespace LAB4_OOP
     /// </summary>
     public partial class Window2 : Window
     {
-        List<AccountUnitDTO> animalsDTO = new List<AccountUnitDTO>();
+        static List<AccountUnitDTO> animalsDTO = new List<AccountUnitDTO>();
         List<AccountUnit> animals = new List<AccountUnit>();
         public Window2(List<AccountUnitDTO> animals)
         {
             InitializeComponent();
-            this.animalsDTO = animals;
+            animalsDTO = animals;
             for(int i = 0; i < animalsDTO.Count; i++)
             {
-                this.animals[i] = new AccountUnit(animalsDTO[i]);
-                AccountList.Items.Add(animals[i]);
+                this.animals.Add(new AccountUnit(animalsDTO[i]));
+                AccountList.Items.Add(this.animals[i]);
             }
         }
 
-        private void AddAnimal(object sender, RoutedEventArgs e)
+        private void AddAnimalsInRoom(object sender, RoutedEventArgs e)
         {
-
+            Window3 addAnimal = new Window3();
+            addAnimal.ShowDialog();
         }
 
+        static public void AddUnit(AccountUnitDTO dto)
+        {
+            animalsDTO.Add(dto);
+        }
+
+        private void Ok(object sender, RoutedEventArgs e) => this.Close();
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MainWindow.AddUnits(animalsDTO);
+        }
     }
 }

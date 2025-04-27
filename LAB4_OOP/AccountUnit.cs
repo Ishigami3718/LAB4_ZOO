@@ -13,6 +13,8 @@ namespace LAB4_OOP
         private DateTime recDate;
         private int price;
 
+        public AccountUnit() { }
+
         public AccountUnit(AccountUnitDTO dto)
         {
             animal = dto.Animal;

@@ -79,7 +79,7 @@ namespace LAB4_OOP
                     Number = count,
                     Size = int.Parse(Size.Text),
                     CleanPrice = int.Parse(Price.Text),
-                    AnimalsInfo = new List<AccountUnit>()
+                    AnimalsInfo = new List<AccountUnitDTO>()
                 };
             }
             if (Validator.TryValidateObject(room, new ValidationContext(room), new List<System.ComponentModel.DataAnnotations.ValidationResult>(),true))
@@ -88,15 +88,10 @@ namespace LAB4_OOP
 
         }
 
-        /*public void Close(object sender, CancelEventArgs e)
-        {
-           MessageBox mb = new MessageBox("")
-        }*/
         private void Close(object sender, CancelEventArgs e)
         {
-            // Room.Ser(rooms);
             if (Size.Text == null || Price.Text == null || RoomTypeComboBox.SelectedItem == null || room==null ||
-                Validator.TryValidateObject(room, new ValidationContext(room), new List<System.ComponentModel.DataAnnotations.ValidationResult>(), true))
+                !Validator.TryValidateObject(room, new ValidationContext(room), new List<System.ComponentModel.DataAnnotations.ValidationResult>(), true))
             {
                 MessageBoxResult mb = MessageBox.Show("Ви не задали дані, або введені дані не коректні, бажаєте закрити?", "Підтвердження", MessageBoxButton.YesNo);
                 if (mb == MessageBoxResult.Yes) { }

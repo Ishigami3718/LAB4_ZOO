@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace LAB4_OOP
 {
+    [Serializable]
     public class Animal
     {
         [RegularExpressionAttribute("[а-ЯїЇєЄіІ]{3,20}\\s[а-ЯїЇєЄіІ]{3,20}")]
@@ -18,6 +19,8 @@ namespace LAB4_OOP
         [Range(typeof(DateTime), "2000-01-01", "2025-12-31")]
         private DateTime birthDate;
 
+
+        public Animal() { }
         public Animal(string name,string firstName,string country,DateTime birtDate)
         {
             this.name = name;

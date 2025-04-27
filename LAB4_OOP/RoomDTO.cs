@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace LAB4_OOP
 {
+    [Serializable]
     public class RoomDTO
     {
         public RoomType.Type Type { get; set; }
@@ -15,6 +16,6 @@ namespace LAB4_OOP
         public int Size { get; set; }
         [Range(500,10000)]
         public int CleanPrice { get; set; }
-        public List<AccountUnit> AnimalsInfo { get; set; }
+        public List<AccountUnitDTO> AnimalsInfo { get; set; }
     }
 }

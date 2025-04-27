@@ -34,6 +34,8 @@
         </ComboBox>
         <Button x:Name="AllRooms"  Content="Усі кімнати" Height="32" Width="110" Canvas.Left="196" Canvas.Top="280" 
             FontSize="20" IsEnabled="False" Click="GetAllRooms" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button x:Name="Account" Content="Облік" Height="50" Width="110" Canvas.Left="48" Canvas.Top="276" 
+            FontSize="20" IsEnabled="False" Click="OpenAccounts" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
 
     </Canvas>

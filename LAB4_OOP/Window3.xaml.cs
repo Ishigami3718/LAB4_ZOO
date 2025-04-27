@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +21,39 @@ namespace LAB4_OOP
     /// </summary>
     public partial class Window3 : Window
     {
+        AccountUnitDTO unit;
         public Window3()
         {
             InitializeComponent();
+        }
+
+        public void AddAnimal(object sender, RoutedEventArgs e)
+        {
+            unit = new AccountUnitDTO()
+            {
+                Animal = new Animal(Name.Text,FirstName.Text,Country.Text,Birth.SelectedDate.Value),
+                RecDate = RecDate.SelectedDate.Value,
+                Price = int.Parse(Price.Text)
+            };
+            if (Validator.TryValidateObject(unit, new ValidationContext(unit), new List<System.ComponentModel.DataAnnotations.ValidationResult>(), true))
+                this.Close();
+            else MessageBox.Show("Неправильні дані");
+        }
+
+        private void Close(object sender, CancelEventArgs e)
+        {
+            if (Name.Text == null || FirstName.Text == null || Country.Text == null || unit == null || 
+                Birth.SelectedDate == null || RecDate.SelectedDate == null || Price.Text == null ||
+                !Validator.TryValidateObject(unit, new ValidationContext(unit), new List<System.ComponentModel.DataAnnotations.ValidationResult>(), true))
+            {
+                MessageBoxResult mb = MessageBox.Show("Ви не задали дані, або введені дані не коректні, бажаєте закрити?", "Підтвердження", MessageBoxButton.YesNo);
+                if (mb == MessageBoxResult.Yes) { }
+                if (mb == MessageBoxResult.No) e.Cancel = true;
+            }
+            else
+            {
+                Window2.AddUnit(unit);
+            }
         }
     }
 }

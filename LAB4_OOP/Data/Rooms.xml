@@ -3,43 +3,14 @@
   <RoomDTO>
     <Type>Cage</Type>
     <Number>1</Number>
-    <Size>213</Size>
-    <CleanPrice>1244</CleanPrice>
-    <AnimalsInfo />
-  </RoomDTO>
-  <RoomDTO>
-    <Type>Aquarium</Type>
-    <Number>2</Number>
-    <Size>213</Size>
-    <CleanPrice>1243</CleanPrice>
-    <AnimalsInfo />
-  </RoomDTO>
-  <RoomDTO>
-    <Type>Aquarium</Type>
-    <Number>3</Number>
-    <Size>100</Size>
-    <CleanPrice>50</CleanPrice>
-    <AnimalsInfo />
-  </RoomDTO>
-  <RoomDTO>
-    <Type>Terrarium</Type>
-    <Number>4</Number>
-    <Size>100</Size>
-    <CleanPrice>300</CleanPrice>
-    <AnimalsInfo />
-  </RoomDTO>
-  <RoomDTO>
-    <Type>Aviary</Type>
-    <Number>5</Number>
-    <Size>100000</Size>
-    <CleanPrice>1234</CleanPrice>
-    <AnimalsInfo />
-  </RoomDTO>
-  <RoomDTO>
-    <Type>Aquarium</Type>
-    <Number>7</Number>
-    <Size>100000</Size>
-    <CleanPrice>2143</CleanPrice>
-    <AnimalsInfo />
+    <Size>15</Size>
+    <CleanPrice>700</CleanPrice>
+    <AnimalsInfo>
+      <AccountUnitDTO>
+        <Animal />
+        <RecDate>2025-04-25T00:00:00</RecDate>
+        <Price>3500</Price>
+      </AccountUnitDTO>
+    </AnimalsInfo>
   </RoomDTO>
 </ArrayOfRoomDTO>
