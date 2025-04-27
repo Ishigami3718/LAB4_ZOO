@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Window2" Height="200" Width="300" ResizeMode="NoResize">
     <Canvas>
-        <ListBox x:Name="CagesList"  Height="128" Width="126"/>
-        <DatePicker Width="50" Height="50" Canvas.Left="208" Canvas.Top="42"/>
+        <ListBox x:Name="AccountList"  Height="128" Width="187" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <DatePicker Width="89" Height="50" Canvas.Left="201" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
     </Canvas>
 </Window>

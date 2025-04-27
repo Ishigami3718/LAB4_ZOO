@@ -12,5 +12,10 @@ namespace LAB4_OOP
         private Animal animal;
         private DateTime recDate;
         private int price;
+
+        public override string ToString()
+        {
+            return $"{animal}\nДата надходження:{recDate}, ціна утримання:{price}";
+        }
     }
 }

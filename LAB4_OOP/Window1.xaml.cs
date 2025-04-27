@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -81,7 +82,10 @@ namespace LAB4_OOP
                     AnimalsInfo = new List<AccountUnit>()
                 };
             }
-            this.Close();
+            if (Validator.TryValidateObject(room, new ValidationContext(room), new List<System.ComponentModel.DataAnnotations.ValidationResult>(),true))
+                this.Close();
+            else MessageBox.Show("Неправильні дані");
+
         }
 
         /*public void Close(object sender, CancelEventArgs e)
@@ -91,9 +95,10 @@ namespace LAB4_OOP
         private void Close(object sender, CancelEventArgs e)
         {
             // Room.Ser(rooms);
-            if (Size.Text == null || Price.Text == null || RoomTypeComboBox.SelectedItem == null || room==null)
+            if (Size.Text == null || Price.Text == null || RoomTypeComboBox.SelectedItem == null || room==null ||
+                Validator.TryValidateObject(room, new ValidationContext(room), new List<System.ComponentModel.DataAnnotations.ValidationResult>(), true))
             {
-                MessageBoxResult mb = MessageBox.Show("Ви не задали дані, бажаєте закрити?", "Підтвердження", MessageBoxButton.YesNo);
+                MessageBoxResult mb = MessageBox.Show("Ви не задали дані, або введені дані не коректні, бажаєте закрити?", "Підтвердження", MessageBoxButton.YesNo);
                 if (mb == MessageBoxResult.Yes) { }
                 if (mb == MessageBoxResult.No)  e.Cancel = true; 
             }
