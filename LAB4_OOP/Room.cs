@@ -32,7 +32,7 @@ namespace LAB4_OOP
             number = room.Number;
             size = room.Size;
             cleanPrice = room.CleanPrice;
-            animalsInfo = room.AnimalsInfo;
+            animalsInfo = room.AnimalsInfo.Select(i=>new AccountUnit(i)).ToList();
         }
 
         public RoomDTO ToDTO()
@@ -43,7 +43,7 @@ namespace LAB4_OOP
                 Number = this.number,
                 Size = this.size,
                 CleanPrice = this.cleanPrice,
-                AnimalsInfo = this.animalsInfo
+                AnimalsInfo = this.animalsInfo.Select(i => i.ToDTO()).ToList()
             };
         }
 

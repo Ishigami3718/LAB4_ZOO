@@ -13,6 +13,23 @@ namespace LAB4_OOP
         private DateTime recDate;
         private int price;
 
+        public AccountUnit(AccountUnitDTO dto)
+        {
+            animal = dto.Animal;
+            recDate = dto.RecDate;
+            price = dto.Price;
+        }
+
+        public AccountUnitDTO ToDTO()
+        {
+            return new AccountUnitDTO
+            {
+                Animal = animal,
+                RecDate = recDate,
+                Price = price
+            };
+        }
+
         public override string ToString()
         {
             return $"{animal}\nДата надходження:{recDate}, ціна утримання:{price}";
