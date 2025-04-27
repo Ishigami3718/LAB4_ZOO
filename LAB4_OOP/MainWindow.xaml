@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize" Closed="Close">
     <Canvas>
-        <ListBox x:Name="Rooms" Width="316" Height="177" Canvas.Left="28" Canvas.Top="40" 
+        <ListBox x:Name="Rooms" Width="390" Height="177" Canvas.Left="10" Canvas.Top="40" 
                  HorizontalAlignment="Left" VerticalAlignment="Center" SelectionChanged="RedactRoom"/>
         <TextBlock Text="Зоопарк &quot;Big Piece&quot;" FontSize="40" 
-                 HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="382" Canvas.Top="40"/>
-        <Image Source="/MainImage.jpg" RenderTransformOrigin="0.5,0.5" Canvas.Left="349" Canvas.Top="105" Height="290" Width="424">
+                 HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="421" Canvas.Top="40" Height="53" Width="359"/>
+        <Image Source="/MainImage.jpg" RenderTransformOrigin="0.5,0.5" Canvas.Left="410" Canvas.Top="98" Height="260" Width="380" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

@@ -19,25 +19,9 @@ namespace LAB4_OOP
     /// </summary>
     public partial class Window2 : Window
     {
-        List<Room> rooms=new List<Room>();
-        List<RoomDTO> DTOrooms;
         public Window2()
         {
             InitializeComponent();
-            ShowInList();
-        }
-
-        private void ShowInList()
-        {
-            DTOrooms = Room.Deser(DTOrooms);
-            foreach (RoomDTO room in DTOrooms.Where(i=>i.Type==RoomType.Type.Cage))
-            {
-                rooms.Add(new Room(room));
-            }
-            foreach (Room room in rooms)
-            {
-                CagesList.Items.Add(room);
-            }
         }
 
     }

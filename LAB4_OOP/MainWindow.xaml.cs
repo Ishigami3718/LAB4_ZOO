@@ -25,7 +25,7 @@ namespace LAB4_OOP
         public MainWindow()
         {
             InitializeComponent();
-            rooms=Room.Deser(rooms);
+            rooms=Serializer.Deser(rooms);
             if (rooms == null)  rooms = new List<RoomDTO>();
             foreach (RoomDTO room in rooms) Rooms.Items.Add(new Room(room));
             RoomTypes.ItemsSource = Enum.GetValues(typeof(RoomType.Type));
@@ -63,7 +63,7 @@ namespace LAB4_OOP
         }
         private void Close(object sender, EventArgs e)
         {
-            Room.Ser(rooms);
+            Serializer.Ser(rooms);
             this.Close();
 
         }

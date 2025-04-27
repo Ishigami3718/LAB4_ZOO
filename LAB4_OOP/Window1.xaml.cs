@@ -95,7 +95,7 @@ namespace LAB4_OOP
             {
                 MessageBoxResult mb = MessageBox.Show("Ви не задали дані, бажаєте закрити?", "Підтвердження", MessageBoxButton.YesNo);
                 if (mb == MessageBoxResult.Yes) { }
-                if (mb == MessageBoxResult.No) { e.Cancel = true; }
+                if (mb == MessageBoxResult.No)  e.Cancel = true; 
             }
             else if (isRedact)
             {

@@ -8,6 +8,7 @@
         Title="Window2" Height="200" Width="300" ResizeMode="NoResize">
     <Canvas>
         <ListBox x:Name="CagesList"  Height="128" Width="126"/>
+        <DatePicker Width="50" Height="50" Canvas.Left="208" Canvas.Top="42"/>
 
     </Canvas>
 </Window>

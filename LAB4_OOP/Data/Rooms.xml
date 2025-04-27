@@ -19,6 +19,7 @@
     <Number>3</Number>
     <Size>100</Size>
     <CleanPrice>50</CleanPrice>
+    <AnimalsInfo />
   </RoomDTO>
   <RoomDTO>
     <Type>Terrarium</Type>
