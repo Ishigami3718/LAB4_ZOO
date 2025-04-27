@@ -19,9 +19,22 @@ namespace LAB4_OOP
     /// </summary>
     public partial class Window2 : Window
     {
-        public Window2()
+        List<AccountUnitDTO> animalsDTO = new List<AccountUnitDTO>();
+        List<AccountUnit> animals = new List<AccountUnit>();
+        public Window2(List<AccountUnitDTO> animals)
         {
             InitializeComponent();
+            this.animalsDTO = animals;
+            for(int i = 0; i < animalsDTO.Count; i++)
+            {
+                this.animals[i] = new AccountUnit(animalsDTO[i]);
+                AccountList.Items.Add(animals[i]);
+            }
+        }
+
+        private void AddAnimal(object sender, RoutedEventArgs e)
+        {
+
         }
 
     }

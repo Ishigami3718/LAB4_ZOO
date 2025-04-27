@@ -25,6 +25,7 @@ namespace LAB4_OOP
             this.country = country;
             this.birthDate = birtDate;
         }
+
         public override string ToString()
         {
             return $"Тварина:{name}, ім'я:{firstName}, країна:{country}, дата народження:{birthDate}";
