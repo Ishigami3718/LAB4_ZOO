@@ -10,13 +10,9 @@ namespace LAB4_OOP
     [Serializable]
     public class Animal
     {
-        [RegularExpressionAttribute("[а-ЯїЇєЄіІ]{3,20}\\s[а-ЯїЇєЄіІ]{3,20}")]
         private String name;
-        [RegularExpressionAttribute("[а-ЯїЇєЄіІ]{3,20}")]
         private String firstName;
-        [RegularExpressionAttribute("[А-ЯЇЄІ]{1}[а-яїєі]{2,20}")]
         private String country;
-        [Range(typeof(DateTime), "2000-01-01", "2025-12-31")]
         private DateTime birthDate;
 
 
@@ -27,6 +23,25 @@ namespace LAB4_OOP
             this.firstName = firstName;
             this.country = country;
             this.birthDate = birtDate;
+        }
+
+        public Animal(AnimalDTO animal)
+        {
+            name = animal.Name; 
+            firstName = animal.FirstName; 
+            country = animal.Country;
+            birthDate = animal.BirthDate;
+        }
+
+        public AnimalDTO ToDTO()
+        {
+            return new AnimalDTO
+            {
+                Name = name,
+                FirstName = firstName,
+                Country = country,
+                BirthDate = birthDate
+            };
         }
 
         public override string ToString()

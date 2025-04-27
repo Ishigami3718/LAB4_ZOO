@@ -17,7 +17,7 @@ namespace LAB4_OOP
 
         public AccountUnit(AccountUnitDTO dto)
         {
-            animal = dto.Animal;
+            animal = new Animal(dto.Animal);
             recDate = dto.RecDate;
             price = dto.Price;
         }
@@ -26,7 +26,7 @@ namespace LAB4_OOP
         {
             return new AccountUnitDTO
             {
-                Animal = animal,
+                Animal = animal.ToDTO(),
                 RecDate = recDate,
                 Price = price
             };

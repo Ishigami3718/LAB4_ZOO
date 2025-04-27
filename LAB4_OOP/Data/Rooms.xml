@@ -7,9 +7,31 @@
     <CleanPrice>700</CleanPrice>
     <AnimalsInfo>
       <AccountUnitDTO>
-        <Animal />
+        <Animal>
+          <BirthDate>0001-01-01T00:00:00</BirthDate>
+        </Animal>
         <RecDate>2025-04-25T00:00:00</RecDate>
         <Price>3500</Price>
+      </AccountUnitDTO>
+      <AccountUnitDTO>
+        <Animal>
+          <Name>Мавпа Українська</Name>
+          <FirstName>Назар</FirstName>
+          <Country>Україна</Country>
+          <BirthDate>2025-04-17T00:00:00</BirthDate>
+        </Animal>
+        <RecDate>2025-04-25T00:00:00</RecDate>
+        <Price>3500</Price>
+      </AccountUnitDTO>
+      <AccountUnitDTO>
+        <Animal>
+          <Name>Свиня Лакєрна</Name>
+          <FirstName>Назар</FirstName>
+          <Country>Україна</Country>
+          <BirthDate>2007-12-17T00:00:00</BirthDate>
+        </Animal>
+        <RecDate>2025-04-26T00:00:00</RecDate>
+        <Price>3000</Price>
       </AccountUnitDTO>
     </AnimalsInfo>
   </RoomDTO>

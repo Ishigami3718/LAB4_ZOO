@@ -31,7 +31,13 @@ namespace LAB4_OOP
         {
             unit = new AccountUnitDTO()
             {
-                Animal = new Animal(Name.Text,FirstName.Text,Country.Text,Birth.SelectedDate.Value),
+                Animal = new AnimalDTO()
+                { 
+                    Name=Name.Text, 
+                    FirstName= FirstName.Text, 
+                    Country=Country.Text, 
+                    BirthDate = Birth.SelectedDate.Value 
+                },
                 RecDate = RecDate.SelectedDate.Value,
                 Price = int.Parse(Price.Text)
             };
