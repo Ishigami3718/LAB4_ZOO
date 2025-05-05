@@ -21,6 +21,8 @@ namespace LAB4_OOP
     {
         static List<AccountUnitDTO> animalsDTO = new List<AccountUnitDTO>();
         List<AccountUnit> animals = new List<AccountUnit>();
+        List<Animal> animalsEntity = new List<Animal>();
+
         public Window2(List<AccountUnitDTO> animals)
         {
             InitializeComponent();
@@ -30,6 +32,7 @@ namespace LAB4_OOP
                 this.animals.Add(new AccountUnit(animalsDTO[i]));
                 AccountList.Items.Add(this.animals[i]);
             }
+            animalsEntity = animalsDTO.Select(i => new Animal(i.Animal)).ToList();
         }
 
         private void AddAnimalsInRoom(object sender, RoutedEventArgs e)
@@ -53,17 +56,20 @@ namespace LAB4_OOP
 
         private void Age_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"{new Animal(((AccountUnit)AccountList.SelectedItem).ToDTO().Animal).GetAge()}");
+            MessageBox.Show($"{animalsEntity[AccountList.SelectedIndex].GetAge()}");
         }
 
         private void Status(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"{new Animal(((AccountUnit)AccountList.SelectedItem).ToDTO().Animal).Status}");
+            string res;
+            if (animalsEntity[AccountList.SelectedIndex].Status) res = "Нагодована";
+            else res = "Голодна";
+            MessageBox.Show(res);
         }
 
         private void Feed(object sender, RoutedEventArgs e)
         {
-            new Animal(((AccountUnitDTO)AccountList.SelectedItem).Animal).Feed();
+            animalsEntity[AccountList.SelectedIndex].Status = true;
     }
     }
 }
