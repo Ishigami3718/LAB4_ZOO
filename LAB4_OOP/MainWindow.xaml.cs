@@ -91,7 +91,8 @@ namespace LAB4_OOP
             Window2 animals = new Window2(((Room)Rooms.SelectedItem).ToDTO().AnimalsInfo);
             int indx = ((Room)Rooms.SelectedItem).ToDTO().Number - 1;
             animals.ShowDialog();
-            rooms[indx].AnimalsInfo = accountUnit;
+            try { rooms[indx].AnimalsInfo = accountUnit; }
+            catch { }
         }
 
         static public void AddUnits(List<AccountUnitDTO> accountUnitDTO)

@@ -8,6 +8,9 @@
     <AnimalsInfo>
       <AccountUnitDTO>
         <Animal>
+          <Name>Пантера Лісова</Name>
+          <FirstName>Багіра</FirstName>
+          <Country>Індія</Country>
           <BirthDate>0001-01-01T00:00:00</BirthDate>
         </Animal>
         <RecDate>2025-04-25T00:00:00</RecDate>
@@ -16,7 +19,7 @@
       <AccountUnitDTO>
         <Animal>
           <Name>Мавпа Українська</Name>
-          <FirstName>Назар</FirstName>
+          <FirstName>Бабай</FirstName>
           <Country>Україна</Country>
           <BirthDate>2025-04-17T00:00:00</BirthDate>
         </Animal>
@@ -25,9 +28,9 @@
       </AccountUnitDTO>
       <AccountUnitDTO>
         <Animal>
-          <Name>Свиня Лакєрна</Name>
-          <FirstName>Назар</FirstName>
-          <Country>Україна</Country>
+          <Name>Кабан Дикий</Name>
+          <FirstName>Пумба</FirstName>
+          <Country>Африка</Country>
           <BirthDate>2007-12-17T00:00:00</BirthDate>
         </Animal>
         <RecDate>2025-04-26T00:00:00</RecDate>
@@ -84,6 +87,24 @@
     <Number>5</Number>
     <Size>123</Size>
     <CleanPrice>5436</CleanPrice>
+    <AnimalsInfo>
+      <AccountUnitDTO>
+        <Animal>
+          <Name>Папуга Сірий</Name>
+          <FirstName>Кеша</FirstName>
+          <Country>Мадагаскар</Country>
+          <BirthDate>2025-05-01T00:00:00</BirthDate>
+        </Animal>
+        <RecDate>2025-05-04T00:00:00</RecDate>
+        <Price>3500</Price>
+      </AccountUnitDTO>
+    </AnimalsInfo>
+  </RoomDTO>
+  <RoomDTO>
+    <Type>Cage</Type>
+    <Number>5</Number>
+    <Size>459</Size>
+    <CleanPrice>3400</CleanPrice>
     <AnimalsInfo />
   </RoomDTO>
 </ArrayOfRoomDTO>

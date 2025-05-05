@@ -52,7 +52,11 @@ namespace LAB4_OOP
             MainWindow.AddUnits(animalsDTO);
         }
 
-        private void AccountList_SelectionChanged(object sender, SelectionChangedEventArgs e)=>Age.IsEnabled = true;
+        private void AccountList_SelectionChanged(object sender, SelectionChangedEventArgs e) 
+        { 
+            Age.IsEnabled = true; 
+            RedactB.IsEnabled = true;
+        }
 
         private void Age_Click(object sender, RoutedEventArgs e)
         {
@@ -70,6 +74,24 @@ namespace LAB4_OOP
         private void Feed(object sender, RoutedEventArgs e)
         {
             animalsEntity[AccountList.SelectedIndex].Status = true;
-    }
+        }
+
+        static public void RedactAcc(AccountUnitDTO dto,int indx) => animalsDTO[indx]=dto;
+
+        private void Redact(object sender, RoutedEventArgs e)
+        {
+            int indx = AccountList.SelectedIndex;
+            AccountUnitDTO dto = animalsDTO[indx];
+            Window3 red = new Window3(dto,indx);
+            red.Title = "Редагування";
+            red.ShowDialog();
+            AccountList.Items.Clear();
+            this.animals = new List<AccountUnit>();
+            for (int i = 0; i < animalsDTO.Count; i++)
+            {
+                this.animals.Add(new AccountUnit(animalsDTO[i]));
+                AccountList.Items.Add(this.animals[i]);
+            }
+        }
     }
 }

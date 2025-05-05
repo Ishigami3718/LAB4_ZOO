@@ -22,34 +22,76 @@ namespace LAB4_OOP
     public partial class Window3 : Window
     {
         AccountUnitDTO unit;
+        bool isRedact=false;
+        int indxForRedact;
         public Window3()
         {
             InitializeComponent();
         }
+        public Window3(AccountUnitDTO dto,int indx)
+        {
+            InitializeComponent();
+            Name.Text = dto.Animal.Name;
+            FirstName.Text = dto.Animal.FirstName;
+            Country.Text = dto.Animal.Country;
+            Birth.SelectedDate = dto.Animal.BirthDate;
+            RecDate.SelectedDate = dto.RecDate;
+            Price.Text = dto.Price.ToString();
+            isRedact = true;
+            indxForRedact= indx;
+        }
 
         public void AddAnimal(object sender, RoutedEventArgs e)
         {
-            try
+            if (isRedact)
             {
-                unit = new AccountUnitDTO()
+                try
                 {
-                    Animal = new AnimalDTO()
+                    unit = new AccountUnitDTO()
                     {
-                        Name = Name.Text,
-                        FirstName = FirstName.Text,
-                        Country = Country.Text,
-                        BirthDate = Birth.SelectedDate.Value
-                    },
-                    RecDate = RecDate.SelectedDate.Value,
-                    Price = int.Parse(Price.Text)
-                };
-                if (Validator.TryValidateObject(unit, new ValidationContext(unit), new List<System.ComponentModel.DataAnnotations.ValidationResult>(), true))
-                    this.Close();
-                else MessageBox.Show("Неправильні дані");
+                        Animal = new AnimalDTO()
+                        {
+                            Name = Name.Text,
+                            FirstName = FirstName.Text,
+                            Country = Country.Text,
+                            BirthDate = Birth.SelectedDate.Value
+                        },
+                        RecDate = RecDate.SelectedDate.Value,
+                        Price = int.Parse(Price.Text)
+                    };
+                    if (Validator.TryValidateObject(unit, new ValidationContext(unit), new List<System.ComponentModel.DataAnnotations.ValidationResult>(), true))
+                        this.Close();
+                    else MessageBox.Show("Неправильні дані");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Неправильні дані");
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Неправильні дані");
+                try
+                {
+                    unit = new AccountUnitDTO()
+                    {
+                        Animal = new AnimalDTO()
+                        {
+                            Name = Name.Text,
+                            FirstName = FirstName.Text,
+                            Country = Country.Text,
+                            BirthDate = Birth.SelectedDate.Value
+                        },
+                        RecDate = RecDate.SelectedDate.Value,
+                        Price = int.Parse(Price.Text)
+                    };
+                    if (Validator.TryValidateObject(unit, new ValidationContext(unit), new List<System.ComponentModel.DataAnnotations.ValidationResult>(), true))
+                        this.Close();
+                    else MessageBox.Show("Неправильні дані");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Неправильні дані");
+                }
             }
         }
 
@@ -63,6 +105,10 @@ namespace LAB4_OOP
                 MessageBoxResult mb = MessageBox.Show("Ви не задали дані, або введені дані не коректні, бажаєте закрити?", "Підтвердження", MessageBoxButton.YesNo);
                 if (mb == MessageBoxResult.Yes) { }
                 if (mb == MessageBoxResult.No) e.Cancel = true;
+            }
+            else if (isRedact)
+            {
+                Window2.RedactAcc(unit, indxForRedact);
             }
             else
             {
