@@ -34,7 +34,7 @@ namespace LAB4_OOP
 
         public override string ToString()
         {
-            return $"{animal}\nДата надходження:{recDate}, ціна утримання:{price}";
+            return $"{animal}\nДата надходження:{recDate.ToString("yyyy-MM-dd")}, ціна утримання:{price}";
         }
     }
 }

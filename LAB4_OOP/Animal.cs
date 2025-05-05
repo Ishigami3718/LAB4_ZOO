@@ -49,12 +49,12 @@ namespace LAB4_OOP
             return DateTime.Now.Year-birthDate.Year;
         }
 
-        public bool Status { get; set; }
+        public bool Status { get; set; } = false;
 
         public void Feed()=> Status = true;
         public override string ToString()
         {
-            return $"Тварина:{name}, ім'я:{firstName}, країна:{country}, дата народження:{birthDate}";
+            return $"Тварина:{name}, ім'я:{firstName}, країна:{country}, дата народження:{birthDate.ToString("yyyy-MM-dd")}";
         }
     }
 }

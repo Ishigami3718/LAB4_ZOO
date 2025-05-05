@@ -43,6 +43,26 @@
         <RecDate>2025-05-04T00:00:00</RecDate>
         <Price>3000</Price>
       </AccountUnitDTO>
+      <AccountUnitDTO>
+        <Animal>
+          <Name>Бабуїн Великий</Name>
+          <FirstName>Пак</FirstName>
+          <Country>Африка</Country>
+          <BirthDate>2025-05-01T00:00:00</BirthDate>
+        </Animal>
+        <RecDate>2025-05-04T00:00:00</RecDate>
+        <Price>4000</Price>
+      </AccountUnitDTO>
+      <AccountUnitDTO>
+        <Animal>
+          <Name>Гадюка Сіра</Name>
+          <FirstName>Майя</FirstName>
+          <Country>Україна</Country>
+          <BirthDate>2025-05-01T00:00:00</BirthDate>
+        </Animal>
+        <RecDate>2025-05-04T00:00:00</RecDate>
+        <Price>3500</Price>
+      </AccountUnitDTO>
     </AnimalsInfo>
   </RoomDTO>
   <RoomDTO>

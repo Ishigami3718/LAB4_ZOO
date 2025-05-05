@@ -57,7 +57,8 @@ namespace LAB4_OOP
         {
             if (Name.Text == null || FirstName.Text == null || Country.Text == null || unit == null || 
                 Birth.SelectedDate == null || RecDate.SelectedDate == null || Price.Text == null ||
-                !Validator.TryValidateObject(unit, new ValidationContext(unit), new List<System.ComponentModel.DataAnnotations.ValidationResult>(), true))
+                !Validator.TryValidateObject(unit, new ValidationContext(unit), new List<System.ComponentModel.DataAnnotations.ValidationResult>(), true)
+                || Birth.SelectedDate>DateTime.Now || RecDate.SelectedDate> DateTime.Now)
             {
                 MessageBoxResult mb = MessageBox.Show("Ви не задали дані, або введені дані не коректні, бажаєте закрити?", "Підтвердження", MessageBoxButton.YesNo);
                 if (mb == MessageBoxResult.Yes) { }
