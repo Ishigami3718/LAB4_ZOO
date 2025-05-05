@@ -29,21 +29,28 @@ namespace LAB4_OOP
 
         public void AddAnimal(object sender, RoutedEventArgs e)
         {
-            unit = new AccountUnitDTO()
+            try
             {
-                Animal = new AnimalDTO()
-                { 
-                    Name=Name.Text, 
-                    FirstName= FirstName.Text, 
-                    Country=Country.Text, 
-                    BirthDate = Birth.SelectedDate.Value 
-                },
-                RecDate = RecDate.SelectedDate.Value,
-                Price = int.Parse(Price.Text)
-            };
-            if (Validator.TryValidateObject(unit, new ValidationContext(unit), new List<System.ComponentModel.DataAnnotations.ValidationResult>(), true))
-                this.Close();
-            else MessageBox.Show("Неправильні дані");
+                unit = new AccountUnitDTO()
+                {
+                    Animal = new AnimalDTO()
+                    {
+                        Name = Name.Text,
+                        FirstName = FirstName.Text,
+                        Country = Country.Text,
+                        BirthDate = Birth.SelectedDate.Value
+                    },
+                    RecDate = RecDate.SelectedDate.Value,
+                    Price = int.Parse(Price.Text)
+                };
+                if (Validator.TryValidateObject(unit, new ValidationContext(unit), new List<System.ComponentModel.DataAnnotations.ValidationResult>(), true))
+                    this.Close();
+                else MessageBox.Show("Неправильні дані");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Неправильні дані");
+            }
         }
 
         private void Close(object sender, CancelEventArgs e)

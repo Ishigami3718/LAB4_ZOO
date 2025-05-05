@@ -79,11 +79,7 @@ namespace LAB4_OOP
 
         private void RedactRoom_Click(object sender, RoutedEventArgs e)
         {
-            int indx=0;
-            for(int i=0;i<rooms.Count;i++)
-            {
-                if (new Room(rooms[i]).ToString() == Rooms.SelectedValue.ToString()) indx = i;
-            }
+            int indx = ((Room)Rooms.SelectedItem).ToDTO().Number - 1;
             Window1 red = new Window1(rooms[indx].Size.ToString(), rooms[indx].CleanPrice.ToString(), rooms[indx].Type, indx);
             red.RoomTypeComboBox.ItemsSource = Enum.GetValues(typeof(RoomType.Type));
             red.Title = "Редагування";
@@ -101,6 +97,25 @@ namespace LAB4_OOP
         static public void AddUnits(List<AccountUnitDTO> accountUnitDTO)
         {
             accountUnit = accountUnitDTO;
+        }
+
+        private void Sort_SelectionChanged(object sender, SelectionChangedEventArgs e)=>SortB.IsEnabled = true;
+
+        private void SortList(object sender, RoutedEventArgs e)
+        {
+            Rooms.Items.Clear();
+            switch (Sort.SelectedValue.ToString())
+            {
+                case "System.Windows.Controls.ComboBoxItem: Ціна":
+                    foreach(var i in rooms.OrderBy(i=>i.CleanPrice)) Rooms.Items.Add(new Room(i));
+                    break;
+                case "System.Windows.Controls.ComboBoxItem: Розмір": 
+                    foreach (var i in rooms.OrderBy(i => i.Size)) Rooms.Items.Add(new Room(i)); ; 
+                    break;
+                case "System.Windows.Controls.ComboBoxItem: Номер":
+                    foreach (var i in rooms.OrderBy(i => i.Number)) Rooms.Items.Add(new Room(i)); ;
+                    break;
+            }
         }
     }
 }

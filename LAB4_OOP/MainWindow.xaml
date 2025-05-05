@@ -36,6 +36,13 @@
             FontSize="20" IsEnabled="False" Click="GetAllRooms" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Button x:Name="Account" Content="Облік" Height="50" Width="110" Canvas.Left="48" Canvas.Top="276" 
             FontSize="20" IsEnabled="False" Click="OpenAccounts" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <ComboBox x:Name="Sort" Canvas.Left="359" Canvas.Top="375" Height="36" Width="130" SelectionChanged="Sort_SelectionChanged">
+            <ComboBoxItem Content="Ціна"/>
+            <ComboBoxItem Content="Розмір"/>
+            <ComboBoxItem Content="Номер"/>
+        </ComboBox>
+        <Button x:Name="SortB" Content="Сортувати" Height="50" Width="110" Canvas.Left="518" Canvas.Top="368" 
+            FontSize="20" IsEnabled="False" Click="SortList" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
 
     </Canvas>

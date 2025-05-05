@@ -33,6 +33,37 @@
         <RecDate>2025-04-26T00:00:00</RecDate>
         <Price>3000</Price>
       </AccountUnitDTO>
+      <AccountUnitDTO>
+        <Animal>
+          <Name>Панда Весела</Name>
+          <FirstName>Бан</FirstName>
+          <Country>Китай</Country>
+          <BirthDate>2025-05-04T00:00:00</BirthDate>
+        </Animal>
+        <RecDate>2025-05-04T00:00:00</RecDate>
+        <Price>3000</Price>
+      </AccountUnitDTO>
     </AnimalsInfo>
+  </RoomDTO>
+  <RoomDTO>
+    <Type>Cage</Type>
+    <Number>4</Number>
+    <Size>214</Size>
+    <CleanPrice>2455</CleanPrice>
+    <AnimalsInfo />
+  </RoomDTO>
+  <RoomDTO>
+    <Type>Aquarium</Type>
+    <Number>3</Number>
+    <Size>120</Size>
+    <CleanPrice>9000</CleanPrice>
+    <AnimalsInfo />
+  </RoomDTO>
+  <RoomDTO>
+    <Type>Aviary</Type>
+    <Number>5</Number>
+    <Size>123</Size>
+    <CleanPrice>5436</CleanPrice>
+    <AnimalsInfo />
   </RoomDTO>
 </ArrayOfRoomDTO>

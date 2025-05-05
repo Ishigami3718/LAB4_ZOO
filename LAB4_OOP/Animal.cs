@@ -44,6 +44,14 @@ namespace LAB4_OOP
             };
         }
 
+        public int GetAge()
+        {
+            return DateTime.Now.Year-birthDate.Year;
+        }
+
+        public bool Status { get; set; }
+
+        public void Feed()=> Status = true;
         public override string ToString()
         {
             return $"Тварина:{name}, ім'я:{firstName}, країна:{country}, дата народження:{birthDate}";

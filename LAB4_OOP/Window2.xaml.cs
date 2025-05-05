@@ -48,5 +48,22 @@ namespace LAB4_OOP
         {
             MainWindow.AddUnits(animalsDTO);
         }
+
+        private void AccountList_SelectionChanged(object sender, SelectionChangedEventArgs e)=>Age.IsEnabled = true;
+
+        private void Age_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"{new Animal(((AccountUnit)AccountList.SelectedItem).ToDTO().Animal).GetAge()}");
+        }
+
+        private void Status(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"{new Animal(((AccountUnit)AccountList.SelectedItem).ToDTO().Animal).Status}");
+        }
+
+        private void Feed(object sender, RoutedEventArgs e)
+        {
+            new Animal(((AccountUnitDTO)AccountList.SelectedItem).Animal).Feed();
+    }
     }
 }
