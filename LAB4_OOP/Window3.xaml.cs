@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -86,6 +87,30 @@ namespace LAB4_OOP
             else
             {
                 Window2.AddUnit(unit);
+            }
+        }
+
+        public void ValidatePrice(object sender, RoutedEventArgs e)
+        {
+            Regex digit = new Regex("^\\d+$");
+            TextBox text = (TextBox)sender;
+            if (!digit.IsMatch(text.Text))
+            {
+                text.Focus();
+                e.Handled = true;
+                MessageBox.Show("Неправильні дані");
+            }
+        }
+
+        public void ValidateTextBlock(object sender, RoutedEventArgs e)
+        {
+            Regex word = new Regex("^\\w{3,20}$");
+            TextBox text = (TextBox)sender;
+            if (!word.IsMatch(text.Text))
+            {
+                text.Focus();
+                e.Handled = true;
+                MessageBox.Show("Неправильні дані");
             }
         }
     }

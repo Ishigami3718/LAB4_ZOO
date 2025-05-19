@@ -146,5 +146,6 @@
     <Number>8</Number>
     <Size>321</Size>
     <CleanPrice>5100</CleanPrice>
+    <AnimalsInfo />
   </RoomDTO>
 </ArrayOfRoomDTO>
