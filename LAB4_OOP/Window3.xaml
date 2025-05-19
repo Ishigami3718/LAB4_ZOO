@@ -15,7 +15,7 @@
            TextAlignment="Right" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <TextBlock Text="Країна" Margin="13,113,0,0" MinWidth="100" MinHeight="25"
            TextAlignment="Right" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-        <DatePicker x:Name="Birth" Width="30" Height="26" Canvas.Left="129" Canvas.Top="144" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <DatePicker x:Name="Birth" Width="130" Height="26" Canvas.Left="129" Canvas.Top="144" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         <Button Content="OK" Width="76" Height="31" Canvas.Left="214" Canvas.Top="243" HorizontalAlignment="Center" VerticalAlignment="Top" Click="AddAnimal"/>
         <TextBox x:Name="Name" MinWidth="80" MinHeight="25" Canvas.Left="129" Canvas.Top="29" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <TextBlock Text="Дата народження" MinWidth="100" MinHeight="25"
@@ -24,7 +24,7 @@
             TextAlignment="Right" Canvas.Left="13" Canvas.Top="183" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <TextBlock Text="Ціна" MinWidth="100" MinHeight="25"
             TextAlignment="Right" Canvas.Left="13" Canvas.Top="213" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <DatePicker x:Name="RecDate" Width="30" Height="26" Canvas.Left="129" Canvas.Top="182" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <DatePicker x:Name="RecDate" Width="130" Height="26" Canvas.Left="129" Canvas.Top="182" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         <TextBox x:Name="Price" MinWidth="80" MinHeight="25" Canvas.Left="129" Canvas.Top="213" HorizontalAlignment="Center" VerticalAlignment="Top"/>
     </Canvas>
 </Window>

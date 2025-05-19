@@ -26,21 +26,21 @@ namespace LAB4_OOP
         public MainWindow()
         {
             InitializeComponent();
-            rooms=Serializer.Deser(rooms);
-            if (rooms == null)  rooms = new List<RoomDTO>();
+            rooms = Serializer.Deser(rooms);
+            if (rooms == null) rooms = new List<RoomDTO>();
             foreach (RoomDTO room in rooms) Rooms.Items.Add(new Room(room));
             RoomTypes.ItemsSource = Enum.GetValues(typeof(RoomType.Type));
         }
 
         private List<RoomDTO> GetRoomsOfType(RoomType.Type type)
         {
-            return rooms.Where(i=>i.Type==type).ToList();
+            return rooms.Where(i => i.Type == type).ToList();
         }
 
         private void GetRoom(object sender, RoutedEventArgs e)
         {
             Rooms.Items.Clear();
-            foreach(RoomDTO room in GetRoomsOfType((RoomType.Type)RoomTypes.SelectedItem)) Rooms.Items.Add(new Room(room));
+            foreach (RoomDTO room in GetRoomsOfType((RoomType.Type)RoomTypes.SelectedItem)) Rooms.Items.Add(new Room(room));
             AllRooms.IsEnabled = true;
         }
 
@@ -51,7 +51,11 @@ namespace LAB4_OOP
             AllRooms.IsEnabled = false;
         }
 
-        public static void AddRoom(RoomDTO room) => rooms.Add(room);
+        public static void AddRoom(RoomDTO room)  
+        {
+            rooms.Add(room);
+        }
+
 
         public static void RedactRoom(RoomDTO room, int num) => rooms[num] = room;
         public static int Count { get { return rooms.Count; } }

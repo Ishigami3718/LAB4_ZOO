@@ -66,6 +66,26 @@
         <RecDate>2025-05-04T00:00:00</RecDate>
         <Price>3500</Price>
       </AccountUnitDTO>
+      <AccountUnitDTO>
+        <Animal>
+          <Name>Сурикат Пустельний</Name>
+          <FirstName>Тімон</FirstName>
+          <Country>Африка</Country>
+          <BirthDate>2025-05-01T00:00:00</BirthDate>
+        </Animal>
+        <RecDate>2025-05-04T00:00:00</RecDate>
+        <Price>2000</Price>
+      </AccountUnitDTO>
+      <AccountUnitDTO>
+        <Animal>
+          <Name>Ведмідь Бурий</Name>
+          <FirstName>Булка</FirstName>
+          <Country>Україна</Country>
+          <BirthDate>2025-05-08T00:00:00</BirthDate>
+        </Animal>
+        <RecDate>2025-05-17T00:00:00</RecDate>
+        <Price>3500</Price>
+      </AccountUnitDTO>
     </AnimalsInfo>
   </RoomDTO>
   <RoomDTO>
@@ -87,24 +107,45 @@
     <Number>5</Number>
     <Size>123</Size>
     <CleanPrice>5436</CleanPrice>
-    <AnimalsInfo>
-      <AccountUnitDTO>
-        <Animal>
-          <Name>Папуга Сірий</Name>
-          <FirstName>Кеша</FirstName>
-          <Country>Мадагаскар</Country>
-          <BirthDate>2025-05-01T00:00:00</BirthDate>
-        </Animal>
-        <RecDate>2025-05-04T00:00:00</RecDate>
-        <Price>3500</Price>
-      </AccountUnitDTO>
-    </AnimalsInfo>
+    <AnimalsInfo />
   </RoomDTO>
   <RoomDTO>
     <Type>Cage</Type>
     <Number>5</Number>
     <Size>459</Size>
     <CleanPrice>3400</CleanPrice>
+    <AnimalsInfo />
+  </RoomDTO>
+  <RoomDTO>
+    <Type>Aquarium</Type>
+    <Number>6</Number>
+    <Size>321</Size>
+    <CleanPrice>1200</CleanPrice>
+    <AnimalsInfo>
+      <AccountUnitDTO>
+        <Animal>
+          <Name>Риба Клоун</Name>
+          <FirstName>Немо</FirstName>
+          <Country>Єгипет</Country>
+          <BirthDate>2025-05-01T00:00:00</BirthDate>
+        </Animal>
+        <RecDate>2025-05-02T00:00:00</RecDate>
+        <Price>2000</Price>
+      </AccountUnitDTO>
+    </AnimalsInfo>
+  </RoomDTO>
+  <RoomDTO>
+    <Type>Cage</Type>
+    <Number>7</Number>
+    <Size>123</Size>
+    <CleanPrice>1200</CleanPrice>
+    <AnimalsInfo />
+  </RoomDTO>
+  <RoomDTO>
+    <Type>Cage</Type>
+    <Number>8</Number>
+    <Size>123</Size>
+    <CleanPrice>1500</CleanPrice>
     <AnimalsInfo />
   </RoomDTO>
 </ArrayOfRoomDTO>

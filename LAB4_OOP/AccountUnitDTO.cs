@@ -12,6 +12,7 @@ namespace LAB4_OOP
     {
         public AnimalDTO Animal { get; set; }
         [Range(typeof(DateTime),"2020-01-01","2025-12-31")]
+        [MaxDate()]
         public DateTime RecDate { get; set; }
         [Range(2000,20000)]
         public int Price { get; set; }

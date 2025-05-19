@@ -16,6 +16,7 @@ namespace LAB4_OOP
         [RegularExpressionAttribute("[А-ЯЇЄІ]{1}[а-яїєі]{2,20}")]
         public String Country {  get; set; }
         [Range(typeof(DateTime), "2000-01-01", "2025-12-31")]
+        [MaxDate()]
         public DateTime BirthDate {  get; set; }
     }
 }

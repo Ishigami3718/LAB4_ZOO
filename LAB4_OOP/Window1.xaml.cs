@@ -41,6 +41,7 @@ namespace LAB4_OOP
             Size.Text = size;
             Price.Text = price;
             RoomTypeComboBox.SelectedItem = type;
+           // RoomTypeComboBox.I
             isRedact = true;
             count=num;
         }
