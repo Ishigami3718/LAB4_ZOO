@@ -63,7 +63,7 @@ namespace LAB4_OOP
         {
 
             Window1 room = new Window1();
-            room.RoomTypeComboBox.ItemsSource = Enum.GetValues(typeof(RoomType.Type));
+            //room.RoomTypeComboBox.ItemsSource = Enum.GetValues(typeof(RoomType.Type));
             room.ShowDialog();
         }
         private void Close(object sender, EventArgs e)

@@ -40,8 +40,10 @@ namespace LAB4_OOP
             InitializeComponent();
             Size.Text = dto.Size.ToString();
             Price.Text = dto.CleanPrice.ToString();
-            RoomTypeComboBox.SelectedItem = dto.Type;
-           // RoomTypeComboBox.I
+            RoomTypeComboBox.ItemsSource = Enum.GetValues(typeof(RoomType.Type));
+             RoomTypeComboBox.SelectedItem = dto.Type;
+            //RoomTypeComboBox.SelectedItem = Enum.Parse(typeof(RoomType.Type), dto.Type.ToString());
+            // RoomTypeComboBox.I
             isRedact = true;
             count=dto.Number;
         }
