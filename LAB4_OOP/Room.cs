@@ -32,7 +32,8 @@ namespace LAB4_OOP
             number = room.Number;
             size = room.Size;
             cleanPrice = room.CleanPrice;
-            animalsInfo = room.AnimalsInfo.Select(i=>new AccountUnit(i)).ToList();
+            if(room.AnimalsInfo==null) animalsInfo = new List<AccountUnit>();
+            else animalsInfo = room.AnimalsInfo.Select(i=>new AccountUnit(i)).ToList();
         }
 
         public RoomDTO ToDTO()

@@ -35,15 +35,15 @@ namespace LAB4_OOP
             count = MainWindow.Count;
         }
 
-        public Window1(string size, string price, RoomType.Type type, int num)
+        public Window1(RoomDTO dto)
         {
             InitializeComponent();
-            Size.Text = size;
-            Price.Text = price;
-            RoomTypeComboBox.SelectedItem = type;
+            Size.Text = dto.Size.ToString();
+            Price.Text = dto.CleanPrice.ToString();
+            RoomTypeComboBox.SelectedItem = dto.Type;
            // RoomTypeComboBox.I
             isRedact = true;
-            count=num;
+            count=dto.Number;
         }
 
         public void Validate(object sender, RoutedEventArgs e)
@@ -62,7 +62,6 @@ namespace LAB4_OOP
         {
             if (isRedact)
             {
-                count++;
                 room = new RoomDTO
                 {
                     Type = (RoomType.Type)RoomTypeComboBox.SelectedItem,

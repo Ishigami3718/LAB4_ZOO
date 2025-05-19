@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LAB4_OOP"
         mc:Ignorable="d"
-        Title="Облік" Height="200" Width="500" ResizeMode="NoResize" Closing="Window_Closing">
+        Title="Облік" Height="200" Width="600" ResizeMode="NoResize" Closing="Window_Closing">
     <Canvas>
-        <ListBox x:Name="AccountList"  Height="128" Width="350" HorizontalAlignment="Left" VerticalAlignment="Center" SelectionChanged="AccountList_SelectionChanged"/>
-        <Button Content="Додати тварину" Click="AddAnimalsInRoom" FontSize="12" Height="50" Width="98" Canvas.Left="378" Canvas.Top="14" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <ListBox x:Name="AccountList"  Height="128" Width="474" HorizontalAlignment="Left" VerticalAlignment="Center" SelectionChanged="AccountList_SelectionChanged"/>
+        <Button Content="Додати тварину" Click="AddAnimalsInRoom" FontSize="12" Height="50" Width="98" Canvas.Left="479" Canvas.Top="14" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         <Button Content="OK" Click="Ok" FontSize="12" Height="34" Width="64" Canvas.Left="412" Canvas.Top="136" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Button x:Name="Age" Content="Вік" Click="Age_Click" IsEnabled="False" FontSize="12" Height="32" Width="64" Canvas.Left="10" Canvas.Top="138" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Button Content="Статус" Click="Status" FontSize="12" Height="32" Width="64" Canvas.Left="95" Canvas.Top="137" HorizontalAlignment="Left" VerticalAlignment="Center"/>

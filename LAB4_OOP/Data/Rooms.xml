@@ -142,10 +142,9 @@
     <AnimalsInfo />
   </RoomDTO>
   <RoomDTO>
-    <Type>Cage</Type>
+    <Type>Terrarium</Type>
     <Number>8</Number>
-    <Size>123</Size>
-    <CleanPrice>1500</CleanPrice>
-    <AnimalsInfo />
+    <Size>321</Size>
+    <CleanPrice>5100</CleanPrice>
   </RoomDTO>
 </ArrayOfRoomDTO>

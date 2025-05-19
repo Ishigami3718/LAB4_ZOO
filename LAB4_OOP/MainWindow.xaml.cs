@@ -83,8 +83,8 @@ namespace LAB4_OOP
 
         private void RedactRoom_Click(object sender, RoutedEventArgs e)
         {
-            int indx = ((Room)Rooms.SelectedItem).ToDTO().Number - 1;
-            Window1 red = new Window1(rooms[indx].Size.ToString(), rooms[indx].CleanPrice.ToString(), rooms[indx].Type, indx);
+            RoomDTO dto = ((Room)Rooms.SelectedItem).ToDTO();
+            Window1 red = new Window1(dto);
             red.RoomTypeComboBox.ItemsSource = Enum.GetValues(typeof(RoomType.Type));
             red.Title = "Редагування";
             red.ShowDialog();
